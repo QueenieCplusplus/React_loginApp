@@ -1,8 +1,7 @@
 // 2020, 7/14, pm 3:20 
-
 // ES6
-
 // 頁面顯示的函數
+
 import React, {Component} from 'react';
 
 class Login extends Component{
@@ -12,11 +11,8 @@ class Login extends Component{
         return(
 
             <div>Login Page</div>
-
         );
-
     }
-
 }
 
 export default Login;

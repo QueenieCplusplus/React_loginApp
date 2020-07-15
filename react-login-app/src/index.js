@@ -1,6 +1,5 @@
 // 2020, 7/14, pm 3:00 - 3:15
 // 2020, 7/14, pm 3:45 - 4:00
-
 // ES6
 // npm install create-react-app -g
 // create-react-app {app name}
@@ -35,7 +34,7 @@ import Register from './containers2';
 // reducer
 import reducer from './reducer';
 
-// store obj
+// store obj as Hook
 const store = createStore(reducer, compose(
 
     applyMiddleware(thunk),
@@ -46,18 +45,11 @@ const store = createStore(reducer, compose(
 
 ))
 
-// render(ele, container|fragment, callback)
-// bug issued at 11:20 on 7/15
-/* Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
- 1. You might have mismatching versions of React and the renderer (such as React DOM)
- 2. You might be breaking the Rules of Hooks
- 3. You might have more than one copy of React in the same app
-See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.*/
-// debug report at 11:20 on 7/15
-/* my react-dom version is 16.13.1 
-  this version is upper than 16.8.0
-  support the hook */
-
+// render(ele, container|fragment)
+// need debug
+/*You can only call Hooks (const store) while React is rendering a function component:
+✅ Call them at the top level in the body of a function component.
+✅ Call them at the top level in the body of a custom Hook.*/
 ReactDOM.render(
     <Provider store = {store}>
         <Router>
@@ -70,8 +62,6 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 )
-
-
 
 
 

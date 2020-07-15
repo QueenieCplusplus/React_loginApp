@@ -16,8 +16,8 @@ class Login extends Component{
                 <WhiteSpace/>
                 <WhiteSpace/>
                 <List>
-                    <InputItem> Account Name: </InputItem>
-                    <InputItem> Password: </InputItem>
+                    <InputItem> Account Name </InputItem>
+                    <InputItem> Password </InputItem>
                 </List>
                 <WhiteSpace/>
                 <WhiteSpace/>
@@ -28,9 +28,7 @@ class Login extends Component{
                     <Button onClick={this.RegisterGoer.bind(this)} type="primary">Sign Up</Button>
                 </WingBlank>
             </div>
-
         );
-
     }
 
     // user surf on the url path /signup 
@@ -39,7 +37,6 @@ class Login extends Component{
     RegisterGoer(){
         this.state.history.push('/signup');
     }
-
 }
 
 export default Login;

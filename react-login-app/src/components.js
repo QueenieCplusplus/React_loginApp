@@ -1,12 +1,10 @@
 // 2020, 7/14, pm 3:30 
-
 // ES6
-
 // 元件物件定義
 
 import {Component} from 'react';
-import {withRouter} from 'react-router-dom';
-import axios from 'axios'; // debug
+//import {withRouter} from 'react-router-dom';
+import axios from 'axios' 
 
 class CheckLogin extends Component{
 
