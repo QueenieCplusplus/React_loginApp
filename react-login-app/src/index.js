@@ -58,14 +58,12 @@ ReactDOM.render(
             <div className = "react-login-app">  
                 <CheckLogin></CheckLogin>
                 <Route path='/login' component={Login}></Route>
-                <Route path='singup' component={Register}></Route>
+                <Route path='/singup' component={Register}></Route>
             </div>
         </Router>
     </Provider>,
     document.getElementById('root')
 )
-
-
 
 
 

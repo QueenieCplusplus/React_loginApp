@@ -22,6 +22,7 @@ class CheckLogin extends Component{
                 }else{
 
                     this.state.history.push('/login');
+                    // or using this.props.history.push();
 
                 }
             }
