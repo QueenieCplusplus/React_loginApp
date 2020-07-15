@@ -6,6 +6,18 @@ import React, {Component} from 'react';
 import {List, InputItem, WingBlank, WhiteSpace, Button, Radio} from "antd-mobile";
 // logo file path 
 
+// to register the bindup event
+import {connect} from 'react-redux';
+import {register} from './user.redux';
+
+//@ only support by 的plugins transform-decorators-legacy
+// remember to setup the preference of VScode
+@connect(
+    state => state,
+    {register}
+
+)
+
 class Register extends Component {
 
     constructor(props){
@@ -47,6 +59,11 @@ class Register extends Component {
 
     changeHandler(k, v){
         this.setState({[k]:v});
+    }
+
+    // connection
+    registerHandler(){
+        this.state.register(this.state)
     }
 }
 

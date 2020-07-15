@@ -23,7 +23,7 @@ import {Provider} from 'react-redux';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 // self-defined Components
-import CheckLogin from './components';
+import Checker from './checker';
 //import CheckLogin from './components/CheckLogin';
 //import {CheckLogin} from './components/CheckLogin';
 

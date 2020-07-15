@@ -2,7 +2,7 @@
   "name": "react-login-app",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://localhost:8000",
+  "proxy": "https://localhost:8000",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -48,4 +49,3 @@
     ]
   }
 }
-
