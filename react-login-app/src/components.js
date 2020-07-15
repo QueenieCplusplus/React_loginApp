@@ -6,6 +6,7 @@
 
 import {Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import axios from 'axios'; // debug
 
 class CheckLogin extends Component{
 
