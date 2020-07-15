@@ -35,9 +35,6 @@ import Register from './containers2';
 // reducer
 import reducer from './reducer';
 
-
-
-
 // store obj
 const store = createStore(reducer, compose(
 
@@ -49,9 +46,8 @@ const store = createStore(reducer, compose(
 
 ))
 
-
-
 // render(ele, container|fragment, callback)
+// shall debug
 ReactDOM.render(
     <Provider store = {store}>
         <Router>
