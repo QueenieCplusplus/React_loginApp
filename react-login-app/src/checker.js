@@ -20,6 +20,9 @@ class Checker extends Component {
 
                 if(res.data.code === 0){
 
+                    // show payload content body
+                    this.state.getUserInfo(res.data.data)
+
                 }else{
                     this.state.history.push('/login')
                 }
@@ -32,6 +35,14 @@ class Checker extends Component {
         return null;
     }
 
+}
+
+export function getUserInfo(userInfo){
+    return{
+        type: Get_User_info,
+        payload: userInfo
+
+    };
 }
 
 export default Checker;
