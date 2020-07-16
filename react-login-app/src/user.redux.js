@@ -120,3 +120,27 @@ export function login({username, password}){
 
 }
 
+// logout for redux 
+// using action creator
+
+export function logout(){
+    
+    return dispatch => {
+
+        axios.get('/use/logout').then( res => {
+
+            if(res.status === 200 && res.code ===0){
+
+                dispatch(succ(res.data.data))
+
+            }else{
+
+                dispatch(fail(res.data.msg))
+
+            }
+
+        })
+
+    }
+}
+

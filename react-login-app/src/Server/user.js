@@ -114,4 +114,18 @@ Router.post('login', (req, res) => {
 
 })
 
+Router.get('/logout', (req, res) => {
+
+    const {userId} = req.cookies;
+
+    if(!userId){
+        res.json({code:1, msg:'server-side error occurs.'})
+    }
+
+    // clear cookie after logout
+    res.cookie('userId', '');
+    return res.json({code: 0, msg: 'log out in success.'})
+
+})
+
 module.exports = Router;
