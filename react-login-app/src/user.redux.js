@@ -76,3 +76,47 @@ export function register({username, password, pwdCfrm}){
 
 }
 
+/*function fail(msg){
+    retrurn({
+        msg,
+        type: Err_Msg
+
+    });
+}*/
+
+/*function succ(data){
+    return({
+        data,
+        type: Register_Success
+    });
+}*/
+
+export function login({username, password}){
+
+    if(!username || !password){
+
+        return fail('plz enter into both of the username and password.');
+
+    }
+
+    return dispatch => {
+
+        // then() is a promise
+        axios.post('/user/login', {username, password}).then(res => {
+
+            if(res.status === 200 && res.data.code === 0){
+
+                dispatch(succ(res.data.data))
+
+            }else{
+
+                dispatch(fail(res.data.msg))
+
+            }
+
+        })
+
+    }
+
+}
+

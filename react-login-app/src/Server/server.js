@@ -6,6 +6,11 @@
 // execute npm install nodemon -g 
 // execute nodemon server.js
 
+// 2020, 7/16, am 10:10
+// to use cookie plugin
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 // hook
 const express = require('express');
 const userRouter = require('./user');
