@@ -54,7 +54,7 @@ ReactDOM.render(
     <Provider store = {store}>
         <Router>
             <div className = "react-login-app">  
-                <CheckLogin></CheckLogin>
+                <Checker></Checker>
                 <Route path='/login' component={Login}></Route>
                 <Route path='/singup' component={Register}></Route>
             </div>

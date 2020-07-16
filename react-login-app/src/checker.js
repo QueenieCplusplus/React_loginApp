@@ -4,15 +4,16 @@
 import {Component} from 'react';
 // checker is not router, 使用 withRouter 為跳轉畫面。
 import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 @withRouter
 class Checker extends Component {
 
     componentDidMount(){
 
-        if(filterCheck.indexOf(this.state.location.pathname) > -1){
+        /*if(filterCheck.indexOf(this.state.location.pathname) > -1){
             return
-        }
+        }*/
 
         axios.get('/user/info').then(res => {
 
@@ -39,7 +40,7 @@ class Checker extends Component {
 
 export function getUserInfo(userInfo){
     return{
-        type: Get_User_info,
+        type: 'Get_User_Info',
         payload: userInfo
 
     };

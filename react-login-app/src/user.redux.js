@@ -30,7 +30,7 @@ export function user(state=0, action){
 }
 
 function fail(msg){
-    retrurn({
+    return({
         msg,
         type: Err_Msg
 
