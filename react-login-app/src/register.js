@@ -30,8 +30,13 @@ class Register extends Component {
     }
 
     render(){
+
+        // redirectTo see use.redux.js
         return
-            <div>
+
+            {this.state.user.redirectTo? <Redirct to={this.state.user.redirectTo}></Redirct>: null}
+         
+            <div className='show_err'>{this.state.user.msg? this.state.user.msg: ''}
                 <List>
                     <InputItem onChange = {value => this.changeHandler('username', value)}> Account Name </InputItem>
                     <InputItem onChange = {value => this.changeHandler('password', value)}> Password </InputItem>
@@ -49,6 +54,7 @@ class Register extends Component {
                     </Button>
                 </WingBlank>
             </div>
+    
     }
 
     loginGoer(){
@@ -65,6 +71,7 @@ class Register extends Component {
     registerHandler(){
         this.state.register(this.state)
     }
+
 }
 
 export default Register;

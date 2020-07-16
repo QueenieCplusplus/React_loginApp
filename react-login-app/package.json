@@ -10,6 +10,7 @@
     "antd-mobile": "^2.3.3",
     "axios": "^0.19.2",
     "express": "^4.17.1",
+    "mongoose": "^5.9.24",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

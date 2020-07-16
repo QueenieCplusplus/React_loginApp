@@ -5,6 +5,13 @@
 import React, {Component} from 'react';
 import {List, InputItem, WingBlank, WhiteSpace, Button} from 'antd-mobile';
 // logo file path 
+// call actions creator
+import {connect} from 'react-redux'
+
+@connect(
+    state => state,
+    {login}
+)
 
 class Login extends Component{
 
@@ -23,12 +30,17 @@ class Login extends Component{
                 <WhiteSpace/>
                 <WhiteSpace/>
                 <WingBlank>
-                    <Button type="primary">Login</Button>
+                    <Button type="primary" onClick={this.loginHandler}>Login</Button>
                     <WhiteSpace/>
                     <Button onClick={this.RegisterGoer.bind(this)} type="primary">Sign Up</Button>
                 </WingBlank>
             </div>
         );
+    }
+
+    // see use.redux.js
+    loginHandler(){
+        this.state.login(this.state);
     }
 
     // user surf on the url path /signup 
