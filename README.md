@@ -5,7 +5,7 @@ using Redux
       
       
       npm install create-react-app -g
-      reate-react-app {app name}
+      create-react-app {app name}
       
       
 7/15 繼續完成UI花邊和伺服器端code
