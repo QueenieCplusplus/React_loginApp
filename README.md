@@ -1,4 +1,10 @@
 # React_loginApp
+
+* google-sign-in:
+
+  https://docs.expo.io/versions/v38.0.0/sdk/google-sign-in/
+
+
 using Redux 
 
 7/14, pm 3:00
